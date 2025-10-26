@@ -1,18 +1,104 @@
-# React + Vite
+# 🧩 React Redux Toolkit App — Homework 46
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📘 Короткий опис
+Цей проєкт створено з використанням **Vite**, **React** та **Redux Toolkit**.  
+Додаток демонструє роботу з **асинхронними діями** за допомогою `createAsyncThunk` — приклад завантаження даних із публічного API та відображення їх у компоненті React.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ⚙️ Використані технології
+- Vite (швидкий збірник проєкту)
+- React
+- Redux Toolkit (`createSlice`, `createAsyncThunk`)
+- React-Redux (`Provider`, `useSelector`, `useDispatch`)
 
-## React Compiler
+---
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## 🚀 Як запустити проєкт локально
 
-Note: This will impact Vite dev & build performances.
+1. **Клонуй репозиторій:**
 
-## Expanding the ESLint configuration
+   git clone https://github.com/vlada9597/home-work-46.git
+   cd home-work-46
+   
+2.Встанови залежності:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+npm install
+
+3.Запусти у режимі розробки:
+
+npm run dev
+
+4.Відкрий http://localhost:5173
+, щоб переглянути додаток.
+
+5.Зібрати production build:
+
+npm run build
+npm run preview
+
+
+## 🗂️ Структура проєкту
+home-work-46/
+my-redux-app/
+├── src/
+│ ├── redux/
+│ │ ├── store.js
+│ │ ├── slices/
+│ │ │ └── postsSlice.js
+│ │ └── asyncActions/
+│ │ └── fetchPosts.js
+│ ├── components/
+│ │ └── PostsList.jsx
+│ ├── App.jsx
+│ ├── main.jsx
+│ └── index.css
+├── package.json
+├── README.md
+└── ...
+
+
+----------------------------
+
+🌐 Демо-версія
+
+Додаток розгорнуто на платформі  Netlify:
+🔗 
+
+
+🔄 Функціонал
+
+Ініціалізація Redux store через configureStore.
+
+Асинхронна дія fetchPosts створена за допомогою createAsyncThunk.
+
+Обробка станів pending, fulfilled, rejected.
+
+Використання useDispatch та useSelector у компоненті PostsList.
+
+Відображення станів завантаження та помилки.
+
+Простий UI для демонстрації асинхронності.
+
+✅ Критерії виконання
+
+ Проєкт ініціалізовано за допомогою Vite
+
+ Використано Redux Toolkit з createAsyncThunk
+
+ Асинхронна логіка інтегрована у Redux
+
+ Коректна обробка станів pending, fulfilled, rejected
+
+ Наявний файл README.md
+
+ Проєкт деплойнуто на Netlify
+
+🧠 Поради
+
+Використовуйте Redux DevTools для відлагодження стану.
+
+Для складніших сценаріїв можна застосувати Redux Saga або RTK Query.
+
+Конфігураційні змінні API можна винести у .env.
+
